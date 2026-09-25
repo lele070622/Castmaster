@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 160 84% 39%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 14% 92%;
+    --muted-foreground: 215 16% 40%;
+    --accent: 220 14% 92%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 13% 87%;
+    --input: 220 13% 87%;
+    --ring: 160 84% 39%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 217 33% 17%;
+    --card-foreground: 210 40% 98%;
+    --popover: 217 33% 15%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 160 84% 39%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 33% 22%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 22%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 33% 24%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 24%;
+    --input: 217 33% 24%;
+    --ring: 160 84% 39%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+.leaflet-container {
+  @apply h-full w-full bg-background;
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+.leaflet-container .leaflet-control-attribution {
+  @apply bg-background/80 text-muted-foreground text-[10px];
+}
+
+.leaflet-container .leaflet-control-attribution a {
+  color: inherit;
+}
+
+.leaflet-div-icon.spot-marker {
+  background: transparent;
+  border: none;
+}
+
+.map-layer-controls {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1000;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.35);
+  border-radius: 9999px;
+}

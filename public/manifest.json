@@ -1,0 +1,32 @@
+{
+  "name": "CastMaster Pro AI",
+  "short_name": "CastMaster",
+  "description": "AI-powered geospatial fishing intelligence: catch ledger, marine conditions, and fish species vision identification.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0F172A",
+  "theme_color": "#0F172A",
+  "categories": ["sports", "weather", "travel"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    { "name": "Fishing Map", "url": "/map" },
+    { "name": "Catch Journal", "url": "/journal" },
+    { "name": "Identify Catch", "url": "/identify" }
+  ]
+}
